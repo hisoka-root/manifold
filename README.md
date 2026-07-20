@@ -61,7 +61,7 @@ repositories {
     maven { url = "https://jitpack.io" }
 }
 dependencies {
-    implementation "com.github.hisoka-root.manifold:manifold-api:v0.1.0"
+    implementation "com.github.hisoka-root:manifold-api:v0.1.0"
 }
 ```
 
