@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.78' apply false
 }
 
@@ -21,56 +20,6 @@ subprojects {
         maven {
             name = 'NeoForge'
             url = 'https://maven.neoforged.net/releases'
-        }
-    }
-}
-
-def publishedModules = ['manifold-api', 'manifold']
-
-configure(subprojects.findAll { publishedModules.contains(it.name) }) {
-    apply plugin: 'maven-publish'
-
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                from components.java
-
-                pom {
-                    name = "Manifold ${project.name == 'manifold-api' ? 'API' : 'Core'}"
-                    description = 'Manifold — intelligent item logistics for NeoForge'
-                    url = 'https://github.com/hisoka-root/manifold'
-                    licenses {
-                        license {
-                            name = project.name == 'manifold-api' ? 'MIT' : 'MPL-2.0'
-                            url = project.name == 'manifold-api'
-                                    ? 'https://opensource.org/licenses/MIT'
-                                    : 'https://www.mozilla.org/en-US/MPL/2.0/'
-                        }
-                    }
-                    developers {
-                        developer {
-                            id = 'hisoka'
-                            name = 'hisoka'
-                            url = 'https://hisoka.lol'
-                        }
-                    }
-                    scm {
-                        connection = 'scm:git:git://github.com/hisoka-root/manifold.git'
-                        url = 'https://github.com/hisoka-root/manifold'
-                    }
-                }
-            }
-        }
-
-        repositories {
-            maven {
-                name = 'GitHubPackages'
-                url = uri('https://maven.pkg.github.com/hisoka-root/manifold')
-                credentials {
-                    username = findProperty('gprUser') ?: System.getenv('GITHUB_ACTOR')
-                    password = findProperty('gprToken') ?: System.getenv('GITHUB_TOKEN')
-                }
-            }
         }
     }
 }

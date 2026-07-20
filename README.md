@@ -46,25 +46,20 @@ Available on Modrinth and CurseForge (links coming with first release).
 
 ## Addon Development
 
-Manifold ships a separate `manifold-api` artifact (MIT-licensed) that addon mods can compile against:
+Manifold ships a separate `manifold-api` artifact (MIT-licensed) that addon mods can compile against.
+
+### JitPack (recommended)
+
+No authentication required. Uses GitHub releases to build artifacts automatically:
 
 ```gradle
 repositories {
-    maven {
-        name = 'GitHubPackages'
-        url = 'https://maven.pkg.github.com/hisoka-root/manifold'
-        credentials {
-            username = System.getenv('GITHUB_ACTOR') ?: 'your-username'
-            password = System.getenv('GITHUB_TOKEN') ?: 'your-token'
-        }
-    }
+    maven { url = "https://jitpack.io" }
 }
 dependencies {
-    implementation "lol.hisoka:manifold-api:0.1.0"
+    implementation "com.github.hisoka-root.manifold:manifold-api:v0.1.0"
 }
 ```
-
-Publishing is automatic on tagged releases via CI. Only `manifold-api` and `manifold` core are published — compat stubs are not.
 
 The API exposes `EndpointAdapter` for registering custom network endpoints, `RequestFulfillmentEvent` for hooking request lifecycle, and `PipeModuleType`/`PipeModule` for Chassis modules (v0.2+).
 
@@ -77,8 +72,8 @@ The API exposes `EndpointAdapter` for registering custom network endpoints, `Req
 
 ## License
 
-- `manifold-api` — MIT (zero-friction for addons)
-- `manifold` (core mod) — MPL-2.0 (file-level copyleft, doesn't reach addon code)
+- `manifold-api` — MIT 
+- `manifold` (core mod) — MPL-2.0 
 
 ## Credits
 
@@ -87,15 +82,15 @@ The API exposes `EndpointAdapter` for registering custom network endpoints, `Req
 
 ---
 
-*Built for NeoForge 1.21.1. Java 21. Branch `1.21.x`. For other versions/loaders, see [Multi-Version](#multi-version-development).*
+*Built for NeoForge 1.21.1. Java 21. Branch `v1.21.1`. For other versions/loaders, see [Multi-Version](#multi-version-development).*
 
 ## Multi-Version Development
 
-Each Minecraft version lives on its own branch (`1.21.x`, `1.22.x`, etc.). Future Fabric/Quilt ports will follow the same pattern on `fabric/1.21.x`, `quilt/1.21.x`, etc.
+Each Minecraft version lives on its own branch (`v1.21.1`, `v1.22.x`, etc.). Future Fabric/Quilt ports will follow the same pattern on `fabric/1.21.x`, `quilt/1.21.x`, etc.
 
 To start a new version branch:
 ```bash
-git checkout -b 1.22.x master
+git checkout -b v1.22.x master
 ```
 Then update `gradle.properties` (`minecraft_version` + `neoforge_version`), bump `neoforge.mods.toml` version ranges, and run `./gradlew runData`.
 
