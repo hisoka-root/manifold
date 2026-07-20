@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.0] — unreleased
+## [0.1.0] — 2026-07-20
 
 ### Added
 - **Transport Pipe** — routes items through the network (no capability interaction)

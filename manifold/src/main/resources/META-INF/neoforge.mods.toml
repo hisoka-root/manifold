@@ -6,7 +6,6 @@ license = "manifold-api: MIT / manifold: MPL-2.0"
 modId = "manifold"
 version = "0.1.0"
 displayName = "Manifold"
-logoFile = "manifold.png"
 authors = "hisoka"
 description = "A request-routed logistics network mod for NeoForge 1.21.1. Spiritual successor to Logistics Pipes."
 [[mods.dependencies]]
