@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "G": {
+      "tag": "minecraft:glass_panes"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "G G",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "manifold:supplier_pipe"
+  }
+}

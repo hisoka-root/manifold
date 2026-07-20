@@ -1,0 +1,21 @@
+plugins {
+    id 'net.neoforged.moddev'
+}
+
+base {
+    archivesName = 'manifold-compat-refinedstorage'
+}
+
+neoForge {
+    version = neoforge_version
+
+    mods {
+        manifold_compat_refinedstorage {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    implementation project(':manifold-api')
+}

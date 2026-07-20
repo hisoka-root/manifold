@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "tag": "minecraft:glass_panes"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "I I",
+    " G ",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "manifold:wrench"
+  }
+}

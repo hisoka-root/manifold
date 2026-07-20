@@ -1,0 +1,59 @@
+plugins {
+    id 'net.neoforged.moddev'
+}
+
+base {
+    archivesName = 'manifold'
+}
+
+neoForge {
+    version = neoforge_version
+
+    parchment {
+        minecraftVersion = '1.21.1'
+        mappingsVersion = '2024.11.13'
+    }
+
+    mods {
+        manifold {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.test
+        }
+    }
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+        testClient {
+            client()
+        }
+        gameTestServer {
+            server()
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'manifold'
+        }
+        data {
+            data()
+            programArguments.addAll(
+                    '--mod', 'manifold',
+                    '--all',
+                    '--output', file('src/generated/resources').absolutePath,
+                    '--existing', file('src/main/resources').absolutePath
+            )
+        }
+    }
+}
+
+dependencies {
+    implementation project(':manifold-api')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('compileTestJava') {
+    classpath += sourceSets.main.compileClasspath
+}

@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        maven { url = 'https://maven.neoforged.net/releases' }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.9.0'
+}
+
+rootProject.name = 'manifold'
+
+include 'manifold-api'
+include 'manifold'
+include 'manifold-compat-ae2'
+include 'manifold-compat-refinedstorage'
+include 'manifold-compat-create'
+include 'manifold-compat-mekanism'

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "G": {
+      "tag": "minecraft:glass_panes"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "G G",
+    "ICI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "manifold:provider_pipe"
+  }
+}

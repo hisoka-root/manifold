@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "apply": {"model": "manifold:block/pipe_core"}
+    },
+    {
+      "when": {"north": true},
+      "apply": {"model": "manifold:block/pipe_cap"}
+    },
+    {
+      "when": {"south": true},
+      "apply": {"model": "manifold:block/pipe_cap", "y": 180}
+    },
+    {
+      "when": {"east": true},
+      "apply": {"model": "manifold:block/pipe_cap", "y": 90}
+    },
+    {
+      "when": {"west": true},
+      "apply": {"model": "manifold:block/pipe_cap", "y": 270}
+    },
+    {
+      "when": {"up": true},
+      "apply": {"model": "manifold:block/pipe_cap", "x": 270}
+    },
+    {
+      "when": {"down": true},
+      "apply": {"model": "manifold:block/pipe_cap", "x": 90}
+    }
+  ]
+}

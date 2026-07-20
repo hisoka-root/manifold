@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MPL-2.0"
+
+[[mods]]
+modId = "manifold_compat_ae2"
+version = "0.1.0"
+displayName = "Manifold AE2 Compat"
+authors = "hisoka"
+description = "Manifold integration with Applied Energistics 2"
+[[mods.dependencies]]
+modId = "neoforge"
+type = "required"
+ordering = "NONE"
+side = "BOTH"
+versionRange = "[21.1.241,)"
+[[mods.dependencies]]
+modId = "manifold"
+type = "required"
+ordering = "AFTER"
+side = "BOTH"
+versionRange = "[0.1.0,)"
+[[mods.dependencies]]
+modId = "ae2"
+type = "required"
+ordering = "AFTER"
+side = "BOTH"

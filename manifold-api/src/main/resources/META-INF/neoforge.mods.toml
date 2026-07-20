@@ -1,0 +1,16 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "manifold_api"
+version = "0.1.0"
+displayName = "Manifold API"
+authors = "hisoka"
+description = "Public API for Manifold addon mods. MIT licensed."
+[[mods.dependencies]]
+modId = "neoforge"
+type = "required"
+ordering = "NONE"
+side = "BOTH"
+versionRange = "[21.1.241,)"

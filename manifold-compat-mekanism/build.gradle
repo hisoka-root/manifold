@@ -1,0 +1,21 @@
+plugins {
+    id 'net.neoforged.moddev'
+}
+
+base {
+    archivesName = 'manifold-compat-mekanism'
+}
+
+neoForge {
+    version = neoforge_version
+
+    mods {
+        manifold_compat_mekanism {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    implementation project(':manifold-api')
+}

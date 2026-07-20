@@ -1,0 +1,7 @@
+{
+  "block.manifold.provider_pipe": "Provider Pipe",
+  "block.manifold.requester_pipe": "Requester Pipe",
+  "block.manifold.supplier_pipe": "Supplier Pipe",
+  "block.manifold.transport_pipe": "Transport Pipe",
+  "item.manifold.wrench": "Manifold Wrench"
+}

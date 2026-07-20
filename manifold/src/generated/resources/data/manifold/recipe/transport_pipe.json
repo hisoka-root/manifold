@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "minecraft:glass_panes"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "IGI",
+    "G G",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "manifold:transport_pipe"
+  }
+}

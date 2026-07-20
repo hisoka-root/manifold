@@ -1,0 +1,5 @@
+// 1.21.1	2026-07-20T11:13:38.1598935	Loot Tables
+6482f388ffaa2945a00f206c3eccfcb6a549a230 data/manifold/loot_table/blocks/provider_pipe.json
+85a40cffe6b2bf5b632aa2108c2e0b662c904829 data/manifold/loot_table/blocks/requester_pipe.json
+f6673cabd5ca48eb7422c2ee0b6d73caf6e98a0c data/manifold/loot_table/blocks/supplier_pipe.json
+5ae92b811a6e9394f5f34d713221e51c042257a9 data/manifold/loot_table/blocks/transport_pipe.json
