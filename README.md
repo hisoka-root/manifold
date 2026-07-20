@@ -5,6 +5,10 @@
 Manifold is a spiritual successor to Logistics Pipes — a pipe network mod where items don't just flow in a straight line. Instead, blocks on the network **request** what they need from anywhere connected to the pipe grid, using smart routing to find the shortest path through the network.
 
 [![Build](https://github.com/hisoka-root/manifold/actions/workflows/build.yml/badge.svg)](https://github.com/hisoka-root/manifold/actions)
+[![Minecraft](https://img.shields.io/badge/MC-1.21.1-6b4a2e)](https://www.minecraft.net)
+[![NeoForge](https://img.shields.io/badge/NeoForge-21.1.241-df8625)](https://neoforged.net)
+[![JitPack](https://jitpack.io/v/hisoka-root/manifold.svg)](https://jitpack.io/#hisoka-root/manifold)
+[![License](https://img.shields.io/badge/license-MIT%20%2F%20MPL--2.0-blue)](#license)
 
 ## Features
 
